@@ -1,0 +1,36 @@
+services:
+  midas_rep_pdf:
+    image: lucasgaitzsch/pdf-turtle:latest-playground
+    environment:
+      - LOG_LEVEL_DEBUG=true
+      - LOG_JSON_OUTPUT=true
+      - RENDER_TIMEOUT=30
+      - WORKER_INSTANCES=30
+      - PORT=8000
+      - MAX_BODY_SIZE=32
+      - SERVE_PLAYGROUND=true
+      - SECRET=""
+    ports:
+      - "8000:8000"
+  psql:
+    hostname: "primary"
+    image: postgres:latest
+    container_name: orders-psql
+    user: postgres
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+    environment:
+      - POSTGRES_DB=orders_rep
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_ROOT_PASSWORD=postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - db:/var/lib/psql/data
+      - ./scripts:/tmp
+volumes:
+  db:

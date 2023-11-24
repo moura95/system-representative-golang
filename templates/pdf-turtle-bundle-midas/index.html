@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ['Open Sans', 'sans-serif'],
+                        },
+                    },
+                },
+            }
+        </script>
+        <title>{{.OrderStatusHtml}}</title>
+    </head>
+    <body>
+        <div class="w-[765px] font-sans">
+            <div class="w-full h-full m-auto p-3">
+                <div class="relative border-2 border-black px-2 py-2">
+									<div class="relative border-b-[1px] border-gray-400 px-2 py-2">
+										<div class="flex justify-between items-start">
+									<span class="font-bold text-xl"
+                    >{{.OrderStatusHtml}} Nº {{.order_number}}</span
+                >
+									<img src={{.factory_logo_url}} alt="logo" class="w-[100px] absolute top-0 right-0 m-t-1 mr-1" />
+								</div>
+                <div class="flex justify-center items-center flex-col mt-2 space-y-2">
+                    <span class="font-bold text-xl">{{.factory_name}}</span>
+                    <span class="font-bold text-sm mt-2"
+                        >{{.factory_street}} , {{.factory_number}} - {{.factory_zipcode}}</span
+                    >
+                    <span class="font-bold text-lg"
+                        >Tel: {{.factory_number}} - Email: {{.factory_email}}</span
+                    >
+                </div>
+									</div>
+                <div class="flex justify-between mt-5 text-xs">
+                    <div class="flex flex-col space-y-1 w-[50%]">
+                        <span>Cliente: {{.customer_name}}</span>
+                        <span>CNPJ: {{.customer_cnpj}}</span>
+                        <span>Endereco: {{.street}}</span>
+                        <span>Cidade: {{.city}}</span>
+                        <span>Tel: {{.phone}}</span>
+                        <span>Email: {{.customer_email}}</span>
+                        <span>Vendedor: {{.seller_name}}</span>
+                    </div>
+                    <div class="flex flex-col space-y-1 w-[230px]">
+                        <span>Data: {{.created_at}}</span>
+                        <span>IE: {{.ie}}</span>
+                        <span>Cep: {{.zip_code}}</span>
+                        <span>Estado: {{.state}}</span>
+                        <span>N. Fantasia: {{.fantasy_name}}</span>
+                        <span>Comprador: {{.buyer}}</span>
+                        <span>C. de Pagamento: {{.form_payment_name}}</span>
+                    </div>
+                </div>
+								</div>
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr class="bg-gray-200">
+                            <th class="border border-black px-1 py-2 text-xs">Item</th>
+                            <th class="border border-black px-1 py-2 text-xs">Cod.</th>
+                            <th class="border border-black px-1 py-2 text-xs">
+                                Quant.
+                            </th>
+                            <th class="border border-black px-1 py-2 text-xs">Descrição</th>
+                            <th class="border border-black px-1 py-2 text-xs">
+                                Valor Unit.
+                            </th>
+                            <th class="border border-black px-1 py-2 text-xs">IPI</th>
+                            <th class="border border-black px-1 py-2 text-xs">
+                                Desc
+                            </th>
+                            <th class="border border-black px-1 py-2 text-xs">
+                                Preco Total
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+											{{range .items}}
+                        <tr class="bg-white">
+														<td class="border border-black w-[160px] py-1 text-[1rem]">
+																<div class="flex justify-start items-start ml-[5px]">
+																	{{.product_name}}
+																</div>
+                            </td>
+                            <td class="border border-black p-1 text-[1rem]">
+                                {{.code}}
+                            </td>
+                            <td class="border border-black p-1 text-[1rem]">
+                                {{.quantity}}
+                            </td>
+                            <td class="border border-black p-1 text-[1rem]">
+                                {{.description}}
+                            </td>
+                            <td class="border border-black p-1 text-[1rem]">
+                                R$ {{.price}}
+                            </td>
+                            <td class="border border-black p-1 text-[1rem]">
+                                {{.ipi}} %
+                            </td>
+                            <td class="border border-black p-1 text-[1rem]">
+                                {{.discount}} %
+                            </td>
+                            <td class="border border-black w-[140px] py-1 text-[1rem]">
+																<div class="flex justify-end items-end mr-[5px]">
+																	R$ {{.total}}
+																</div>
+                            </td>
+                        </tr>
+												{{end}}
+                    </tbody>
+                </table>
+                <div class="flex mt-5 justify-end items-end mr-10">
+                    <span class="font-bold text-xl"
+                        >Total Geral: R${{.total}}</span
+                    >
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

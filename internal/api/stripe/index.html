@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <script src="https://js.stripe.com/v3/"></script>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
+</head>
+
+
+<body>
+
+<div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+
+    <div class="input-group mb-3" style="width: 70%;">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">@</span>
+        </div>
+        <input aria-label="Email" class="form-control" id="email" placeholder="Email" type="text">
+    </div>
+
+    <button class="btn btn-primary" id="subscribe">Create subscription</button>
+</div>
+
+
+<script sandbox="allow-same-origin">
+    const stripe = Stripe("pk_");
+    const button = document.querySelector("#subscribe");
+    // const
+    button.onclick = () => {
+        const email = document.querySelector("#email");
+        const value = {
+            email: "junior.moura19@hotmail.com",
+            representative_id: "1",
+            product_id: "price_1NQzgAHtPYbCB7tj5LkWqb53"
+        };
+        console.log(value);
+        fetch("http://localhost:8000/stripe/checkout?plan=silver&coupon=MIDAS20", {
+            method: 'POST',
+            body: JSON.stringify(value)
+        }).then(
+            async response => {
+                const res = await response.json();
+                // console.log(res);
+                const id = res.id;
+                console.log(id);
+                stripe.redirectToCheckout({sessionId: id,});
+            }
+        );
+    };
+</script>
+</body>
+
+</html>

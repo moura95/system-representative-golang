@@ -1,0 +1,2074 @@
+{
+	"info": {
+		"_postman_id": "2b2922a9-20f4-48e6-88e5-33de99ffd6f3",
+		"name": "Novo DB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9570837"
+	},
+	"item": [
+		{
+			"name": "Calendar",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Call pra xingar o pride\",\n    \"visit_start\": \"2023-02-02T00:00:00Z\",\n    \"visit_end\": \"2023-02-04T00:00:00Z\",\n    \"allDay\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/calendar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"calendar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/calendar/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"calendar",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/calendar/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"calendar",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/calendar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"calendar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 5,\n        \"title\": \"\",\n        \"visit_start\": \"0001-01-01T00:00:00Z\",\n        \"visit_end\": \"0001-01-01T00:00:00Z\",\n        \"allDay\": true\n    },",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/calendar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"calendar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"Factory\",\n    \"name\": \"Fabrica Cunha\",\n    \"email\": \"efe@uehue.com\",\n    \"web_site\": \"\",\n    \"logo_url\": \"\",\n    \"street\": \"\",\n    \"number\": \"\",\n    \"city\": \"\",\n    \"state\": \"\",\n    \"zip_code\": \"\",\n    \"cpf_cnpj\": \"\",\n    \"phone\": \"\",\n    \"phone2\": \"\",\n    \"logo\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/company",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"company"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/company/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"company",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/company/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"company",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/company?type=Customer&is_active=true",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"company"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "Customer"
+								},
+								{
+									"key": "is_active",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/company/:id/remove",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"company",
+								":id",
+								"remove"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restore",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/company/:id/restore",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"company",
+								":id",
+								"restore"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"type\": \"Factory\",\n    \"name\": \"Customer\",\n    \"email\": \"efe@uehue.com\",\n    \"web_site\": \"\",\n    \"logo_url\": \"\",\n    \"street\": \"\",\n    \"number\": \"\",\n    \"city\": \"\",\n    \"state\": \"\",\n    \"zip_code\": \"\",\n    \"cnpj\": \"\",\n    \"phone\": \"\",\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/company",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"company"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dashboard",
+			"item": [
+				{
+					"name": "topbuyer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/dashboard/topbuyer?start_date=2023-01-01&end_date=2023-03-31&top=10",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"dashboard",
+								"topbuyer"
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2023-01-01"
+								},
+								{
+									"key": "end_date",
+									"value": "2023-03-31"
+								},
+								{
+									"key": "top",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "topproduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/dashboard/topproduct?start_date=2023-01-01&end_date=2023-03-31&top=10",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"dashboard",
+								"topproduct"
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2023-01-01"
+								},
+								{
+									"key": "end_date",
+									"value": "2023-03-31"
+								},
+								{
+									"key": "top",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "totalSales",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/dashboard/totalsales?start_date=2023-01-01&end_date=2023-03-31",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"dashboard",
+								"totalsales"
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2023-01-01"
+								},
+								{
+									"key": "end_date",
+									"value": "2023-03-31"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"factory_id\": 1,\n    \"customer_id\": 1,\n    \"portage_id\": 1,\n    \"seller_id\": 1,\n    \"shipping\": \"CIF\",\n    \"form_payment_id\": 1,\n    \"order_number\": 1,\n    \"buyer\": \"Comprador\",\n    \"status\": \"Rascunho\",\n    \"created_at\": \"2023-03-02T00:00:00Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/order",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/order/:order_id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"order",
+								":order_id"
+							],
+							"variable": [
+								{
+									"key": "order_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/order/:order_id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"order",
+								":order_id"
+							],
+							"variable": [
+								{
+									"key": "order_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetLast",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/order/last",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"order",
+								"last"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/order?is_active=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"order"
+							],
+							"query": [
+								{
+									"key": "is_active",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/order/:order_id/remove",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"order",
+								":order_id",
+								"remove"
+							],
+							"variable": [
+								{
+									"key": "order_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restore",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/order/:order_id/restore",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"order",
+								":order_id",
+								"restore"
+							],
+							"variable": [
+								{
+									"key": "order_id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"factory_id\": 1,\n    \"customer_id\": 1,\n    \"portage_id\": 1,\n    \"seller_id\": 1,\n    \"shipping\": \"FOB\",\n    \"payment\": \"30/34/45\",\n    \"buyer\": \"Comprador\",\n    \"status\": \"Rascunho\",\n    \"create_at\": \"2023-02-04T00:00:00Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/order",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order_items",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"order_id\": 2,\n    \"product_id\": 1,\n    \"quantity\": 1,\n    \"price\": \"100\",\n    \"discount\": \"0.0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/order/item",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"order",
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/order/:order_id/item/:product_id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"order",
+								":order_id",
+								"item",
+								":product_id"
+							],
+							"variable": [
+								{
+									"key": "order_id",
+									"value": "1"
+								},
+								{
+									"key": "product_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/order/:id/item/:product_id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"order",
+								":id",
+								"item",
+								":product_id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "product_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/order/:order_id/item",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"order",
+								":order_id",
+								"item"
+							],
+							"variable": [
+								{
+									"key": "order_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"order_id\": 2,\n    \"product_id\": 1,\n    \"quantity\": 1,\n    \"price\": 1,\n    \"discount\": \"0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/order/item",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"order",
+								"item"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Paseto",
+			"item": [
+				{
+					"name": "Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"refresh_token\": \" \"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/token",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"factory_id\": 1,\n    \"name\": \"lapiz\",\n    \"code\": \"CODe\",\n    \"price\": \"10.00\",\n    \"ipi\": \"5.00\",\n    \"reference\": \"reference\",\n    \"description\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/product",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/product/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"product",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/product/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"product",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/product?is_active=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"product"
+							],
+							"query": [
+								{
+									"key": "factory_id",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "is_active",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/product/:id/remove",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"product",
+								":id",
+								"remove"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restore",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/product/:id/restore",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"product",
+								":id",
+								"restore"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"name\": \"product2\",\n    \"code\": \"Code\",\n    \"price\": \"10.0\",\n    \"ipi\": \"5\",\n    \"reference\": \"reference\",\n    \"unidade\": \"un\",\n    \"description\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/product",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Representative",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cnpj\": \"90669024000120\",\n    \"company_name\": \"Midas\",\n    \"fantasy_name\": \"Midas LTDA\",\n    \"ie\": \"514545\",\n    \"company_phone\": \"9199595959\",\n    \"company_email\": \"midas@hotmail.com\",\n    \"web_site\": \"google.com.br\",\n    \"logo_url\": \"iejiej\",\n    \"zip_code\": \"66000-000\",\n    \"state\": \"PA\",\n    \"city\": \"Belem\",\n    \"street\": \"Rua Manoel Barata\",\n    \"number\": \"156\",\n    \"cpf\": \"5454545\",\n    \"first_name\": \"ivan\",\n    \"last_name\": \"noleto\",\n    \"user_email\": \"ivannoleto@hotmail.com\",\n    \"password\": \"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/representative",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"representative"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/representative",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"representative"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/representative",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"representative"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/representative/remove",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"representative",
+								"remove"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restore",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/representative/restore",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"representative",
+								"restore"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cnpj\": \"90669024000120\",\n    \"company_name\": \"Midas\",\n    \"fantasy_name\": \"Midas LTDA\",\n    \"ie\": \"514545\",\n    \"company_phone\": \"9199595959\",\n    \"company_email\": \"midas@hotmail.com\",\n    \"web_site\": \"google.com.br\",\n    \"logo_url\": \"iejiej\",\n    \"zip_code\": \"66000-000\",\n    \"state\": \"PA\",\n    \"city\": \"Belem\",\n    \"street\": \"Rua Manoel\",\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/representative",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"representative"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Seller",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"dare\",\n    \"pix\": \"12345677\",\n    \"email\": \"vendedor@vr\",\n    \"phone\": \"123\",\n    \"observation\": \"auhahuauh\",\n    \"cpf\": \"025113229\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/seller",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"seller"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/seller/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"seller",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/seller/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"seller",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/seller",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"seller"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/seller/:id/remove",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"seller",
+								":id",
+								"remove"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restore",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/seller/:id/restore",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"seller",
+								":id",
+								"restore"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3,\n    \"name\": \"updated_seller\",\n    \"pix\": \"12345678\",\n    \"email\": \"vendedor@vr\",\n    \"phone\": \"\",\n    \"observation\": \"auhahuauh\",\n    \"cpf\": \"025113229\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/seller",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"seller"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment_form",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"a vista\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/payment_form",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"payment_form"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/payment_form/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"payment_form",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/payment_form/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"payment_form",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/payment_form",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"payment_form"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3,\n    \"name\": \"updated_seller\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/payment_form",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"payment_form"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Smtp",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"ivannoleto@hotmail.com\",\n    \"server\": \"livesmpt.live.com\",\n    \"port\": \"581\",\n    \"cryptography\": \"tls\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/smtp",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"smtp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/smtp",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"smtp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/smtp",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"smtp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"\",\n    \"server\": \"\",\n    \"port\": \"\",\n    \"cryptography\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/smtp",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"smtp"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "File",
+			"item": [
+				{
+					"name": "Create",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"ivannoleto@hotmail.com\",\n    \"server\": \"livesmpt.live.com\",\n    \"port\": \"581\",\n    \"cryptography\": \"tls\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/file/pdf/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"file",
+								"pdf",
+								"2"
+							],
+							"query": [
+								{
+									"key": "abc",
+									"value": "estrin",
+									"disabled": true
+								},
+								{
+									"key": "abcd",
+									"value": "10.0",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send MailPDF",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"customer_email\": \"junior.moura19191919@gmail.com\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/file/mail/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"file",
+								"mail",
+								"2"
+							],
+							"query": [
+								{
+									"key": "abc",
+									"value": "estrin",
+									"disabled": true
+								},
+								{
+									"key": "abcd",
+									"value": "10.0",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"representative_id\": 1,\n    \"cpf\": \"0261133\",\n    \"email\": \"dare-test@hotmail.com\",\n    \"password\": \"12345\",\n    \"first_name\": \"Tarcisio\",\n    \"last_name\": \"Lucas\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/user",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/user/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/user/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/user?is_active=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"user"
+							],
+							"query": [
+								{
+									"key": "is_active",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var responseJson = pm.response.json();",
+									"var bodyToken = responseJson.access_token;",
+									"pm.environment.set(\"token\", bodyToken);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"ivannoleto@hotmail.com\",\n    \"password\": \"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/user/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/user/:id/remove",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"user",
+								":id",
+								"remove"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restore",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/v1/user/:id/restore",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"user",
+								":id",
+								"restore"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"first_name\": \"m\",\n    \"last_name\": \"na\",\n    \"password\": \"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/user",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UpdatePassword",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"old_password\": \"123\",\n    \"new_password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/v1/user/password",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"v1",
+						"user",
+						"password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Healtz",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/healthz",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"healthz"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Webhook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"evt_1MUzHwHtPYbCB7tj2qhgWxVp\",\n  \"object\": \"event\",\n  \"api_version\": \"2022-11-15\",\n  \"created\": 1674854207,\n  \"data\": {\n    \"object\": {\n      \"id\": \"in_1MUzHtHtPYbCB7tjJ8YEUrtd\",\n      \"object\": \"invoice\",\n      \"account_country\": \"BR\",\n      \"account_name\": null,\n      \"account_tax_ids\": null,\n      \"amount_due\": 19900,\n      \"amount_paid\": 0,\n      \"amount_remaining\": 19900,\n      \"application\": null,\n      \"application_fee_amount\": null,\n      \"attempt_count\": 1,\n      \"attempted\": true,\n      \"auto_advance\": false,\n      \"automatic_tax\": {\n        \"enabled\": false,\n        \"status\": null\n      },\n      \"billing_reason\": \"subscription_create\",\n      \"charge\": \"ch_3MUzHtHtPYbCB7tj0FnpfaBE\",\n      \"collection_method\": \"charge_automatically\",\n      \"created\": 1674854205,\n      \"currency\": \"brl\",\n      \"custom_fields\": null,\n      \"customer\": \"cus_NFUGG1P0sWShJX\",\n      \"customer_address\": null,\n      \"customer_email\": \"jr@hotmail.com\",\n      \"customer_name\": null,\n      \"customer_phone\": null,\n      \"customer_shipping\": null,\n      \"customer_tax_exempt\": \"none\",\n      \"customer_tax_ids\": [\n\n      ],\n      \"default_payment_method\": null,\n      \"default_source\": null,\n      \"default_tax_rates\": [\n\n      ],\n      \"description\": null,\n      \"discount\": null,\n      \"discounts\": [\n\n      ],\n      \"due_date\": null,\n      \"ending_balance\": 0,\n      \"footer\": null,\n      \"from_invoice\": null,\n      \"hosted_invoice_url\": \"https://invoice.stripe.com/i/acct_1MUfNAHtPYbCB7tj/test_YWNjdF8xTVVmTkFIdFBZYkNCN3RqLF9ORlVHRHA3OWFWbE1lckZwMVE2d2J5N3Y4VWhkckhXLDY1Mzk1MDA40200xqQAeeFP?s=ap\",\n      \"invoice_pdf\": \"https://pay.stripe.com/invoice/acct_1MUfNAHtPYbCB7tj/test_YWNjdF8xTVVmTkFIdFBZYkNCN3RqLF9ORlVHRHA3OWFWbE1lckZwMVE2d2J5N3Y4VWhkckhXLDY1Mzk1MDA40200xqQAeeFP/pdf?s=ap\",\n      \"last_finalization_error\": null,\n      \"latest_revision\": null,\n      \"lines\": {\n        \"object\": \"list\",\n        \"data\": [\n          {\n            \"id\": \"il_1MUzHtHtPYbCB7tjBuKsR9Ht\",\n            \"object\": \"line_item\",\n            \"amount\": 19900,\n            \"amount_excluding_tax\": 19900,\n            \"currency\": \"brl\",\n            \"description\": \"1 × Plano Intermediario (at R$ 199.00 / month)\",\n            \"discount_amounts\": [\n\n            ],\n            \"discountable\": true,\n            \"discounts\": [\n\n            ],\n            \"livemode\": false,\n            \"metadata\": {\n              \"UserID\": \"123\",\n              \"FinalEmail\": \"jr@hotmail.com\"\n            },\n            \"period\": {\n              \"end\": 1677532605,\n              \"start\": 1674854205\n            },\n            \"plan\": {\n              \"id\": \"price_1MUtAqHtPYbCB7tjMty2kEwD\",\n              \"object\": \"plan\",\n              \"active\": true,\n              \"aggregate_usage\": null,\n              \"amount\": 19900,\n              \"amount_decimal\": \"19900\",\n              \"billing_scheme\": \"per_unit\",\n              \"created\": 1674830704,\n              \"currency\": \"brl\",\n              \"interval\": \"month\",\n              \"interval_count\": 1,\n              \"livemode\": false,\n              \"metadata\": {\n              },\n              \"nickname\": null,\n              \"product\": \"prod_NFNwYXUsyrxwrP\",\n              \"tiers_mode\": null,\n              \"transform_usage\": null,\n              \"trial_period_days\": null,\n              \"usage_type\": \"licensed\"\n            },\n            \"price\": {\n              \"id\": \"price_1MUtAqHtPYbCB7tjMty2kEwD\",\n              \"object\": \"price\",\n              \"active\": true,\n              \"billing_scheme\": \"per_unit\",\n              \"created\": 1674830704,\n              \"currency\": \"brl\",\n              \"custom_unit_amount\": null,\n              \"livemode\": false,\n              \"lookup_key\": null,\n              \"metadata\": {\n              },\n              \"nickname\": null,\n              \"product\": \"prod_NFNwYXUsyrxwrP\",\n              \"recurring\": {\n                \"aggregate_usage\": null,\n                \"interval\": \"month\",\n                \"interval_count\": 1,\n                \"trial_period_days\": null,\n                \"usage_type\": \"licensed\"\n              },\n              \"tax_behavior\": \"unspecified\",\n              \"tiers_mode\": null,\n              \"transform_quantity\": null,\n              \"type\": \"recurring\",\n              \"unit_amount\": 19900,\n              \"unit_amount_decimal\": \"19900\"\n            },\n            \"proration\": false,\n            \"proration_details\": {\n              \"credited_items\": null\n            },\n            \"quantity\": 1,\n            \"subscription\": \"sub_1MUzHtHtPYbCB7tjwTpOOlIz\",\n            \"subscription_item\": \"si_NFUGQPyCgUTOrY\",\n            \"tax_amounts\": [\n\n            ],\n            \"tax_rates\": [\n\n            ],\n            \"type\": \"subscription\",\n            \"unit_amount_excluding_tax\": \"19900\"\n          }\n        ],\n        \"has_more\": false,\n        \"total_count\": 1,\n        \"url\": \"/v1/invoices/in_1MUzHtHtPYbCB7tjJ8YEUrtd/lines\"\n      },\n      \"livemode\": false,\n      \"metadata\": {\n      },\n      \"next_payment_attempt\": null,\n      \"number\": \"2212FB7B-0001\",\n      \"on_behalf_of\": null,\n      \"paid\": false,\n      \"paid_out_of_band\": false,\n      \"payment_intent\": \"pi_3MUzHtHtPYbCB7tj0YhyD3oi\",\n      \"payment_settings\": {\n        \"default_mandate\": null,\n        \"payment_method_options\": null,\n        \"payment_method_types\": null\n      },\n      \"period_end\": 1674854205,\n      \"period_start\": 1674854205,\n      \"post_payment_credit_notes_amount\": 0,\n      \"pre_payment_credit_notes_amount\": 0,\n      \"quote\": null,\n      \"receipt_number\": null,\n      \"rendering_options\": null,\n      \"starting_balance\": 0,\n      \"statement_descriptor\": null,\n      \"status\": \"open\",\n      \"status_transitions\": {\n        \"finalized_at\": 1674854205,\n        \"marked_uncollectible_at\": null,\n        \"paid_at\": null,\n        \"voided_at\": null\n      },\n      \"subscription\": \"sub_1MUzHtHtPYbCB7tjwTpOOlIz\",\n      \"subtotal\": 19900,\n      \"subtotal_excluding_tax\": 19900,\n      \"tax\": null,\n      \"test_clock\": null,\n      \"total\": 19900,\n      \"total_discount_amounts\": [\n\n      ],\n      \"total_excluding_tax\": 19900,\n      \"total_tax_amounts\": [\n\n      ],\n      \"transfer_data\": null,\n      \"webhooks_delivered_at\": null\n    }\n  },\n  \"livemode\": false,\n  \"pending_webhooks\": 1,\n  \"request\": {\n    \"id\": \"req_KjWaJgGygc7RbA\",\n    \"idempotency_key\": \"6b2450e7-3413-49c3-ae92-20f7806b5be2\"\n  },\n  \"type\": \"invoice.payment_failed\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/v1/stripe/webhook",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"v1",
+						"stripe",
+						"webhook"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"const ts  = Date.now();",
+					"pm.environment.set(\"timestamp\", ts);",
+					"",
+					"let paramsObject = {};",
+					"",
+					"const api_secret = pm.environment.get(\"api-secret\");",
+					"",
+					"const parameters = pm.request.url.query;",
+					"",
+					"parameters.map((param) => {",
+					"    if (param.key != 'signature' && ",
+					"        param.key != 'timestamp' && ",
+					"        !is_empty(param.value) &&",
+					"        !is_disabled(param.disabled)) {",
+					"            paramsObject[param.key] = param.value;",
+					"    }",
+					"})",
+					"        ",
+					"Object.assign(paramsObject, {'timestamp': ts});",
+					"",
+					"if (api_secret) {",
+					"    const queryString = Object.keys(paramsObject).map((key) => {",
+					"        return `${key}=${paramsObject[key]}`;",
+					"    }).join('&');",
+					"",
+					"    const signature = CryptoJS.HmacSHA256(queryString, api_secret).toString();",
+					"    pm.environment.set(\"signature\", signature);",
+					"}",
+					"",
+					"function is_disabled(str) {",
+					"    return str == true;",
+					"}",
+					"",
+					"function is_empty(str) {",
+					"    if (typeof str == 'undefined' ||",
+					"        !str || ",
+					"        str.length === 0 || ",
+					"        str === \"\" ||",
+					"        !/[^\\s]/.test(str) ||",
+					"        /^\\s*$/.test(str) ||",
+					"        str.replace(/\\s/g,\"\") === \"\")",
+					"    {",
+					"        return true;",
+					"    }",
+					"    else",
+					"    {",
+					"        return false;",
+					"    }",
+					"}"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

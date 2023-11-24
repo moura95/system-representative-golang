@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ['Open Sans', 'sans-serif'],
+                        },
+                    },
+                },
+            }
+        </script>
+        <title>Title</title>
+    </head>
+    <body>
+        <div class="m-5 font-sans h-[95vh]">
+            <div class="w-[1080px] h-full m-auto border-2 border-black p-5 m-5">
+                <span class="font-bold text-3xl"
+                    >Pedido N: [variable-here]</span
+                >
+                <div class="flex justify-center items-center flex-col mt-7">
+                    <span class="font-bold text-3xl">[variable-here]</span>
+                    <span class="font-bold text-xl mt-2"
+                        >[variable-here] - [variable-here] - [variable-here] -
+                        [variable-here]</span
+                    >
+                    <span class="font-bold text-xl"
+                        >Tel: [variable-here] - Email: [variable-here]</span
+                    >
+                </div>
+                <div class="flex justify-between mt-10">
+                    <div class="flex flex-col space-y-3">
+                        <span>Cliente: [variable-here]</span>
+                        <span>CNPJ: [variable-here]</span>
+                        <span>Endereco: [variable-here]</span>
+                        <span>Cidade: [variable-here]</span>
+                        <span>Tel: [variable-here]</span>
+                        <span>Email: [variable-here]</span>
+                        <span>Vendedor: [variable-here]</span>
+                    </div>
+                    <div class="flex flex-col space-y-3">
+                        <span>Data: [variable-here]</span>
+                        <span>IE: [variable-here]</span>
+                        <span>Cep: [variable-here]</span>
+                        <span>Estado: [variable-here]</span>
+                        <span>Nome Fantasia: [variable-here]</span>
+                        <span>Comprador: [variable-here]</span>
+                        <span>Condicoes de Pagamento: [variable-here]</span>
+                    </div>
+                </div>
+                <table class="w-full border-collapse mt-10">
+                    <thead>
+                        <tr class="bg-gray-200">
+                            <th class="border border-black px-4 py-2">Item</th>
+                            <th class="border border-black px-4 py-2">Cod.</th>
+                            <th class="border border-black px-4 py-2">
+                                Quant.
+                            </th>
+                            <th class="border border-black px-4 py-2">Desc</th>
+                            <th class="border border-black px-4 py-2">
+                                Valor Unit.
+                            </th>
+                            <th class="border border-black px-4 py-2">IPI</th>
+                            <th class="border border-black px-4 py-2">
+                                Desconto
+                            </th>
+                            <th class="border border-black px-4 py-2">
+                                Preco Total
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-white">
+                            <td class="border border-black px-4 py-2">
+                                [variable-here]
+                            </td>
+                            <td class="border border-black px-4 py-2">
+                                [variable-here]
+                            </td>
+                            <td class="border border-black px-4 py-2">
+                                [variable-here]
+                            </td>
+                            <td class="border border-black px-4 py-2">
+                                [variable-here]
+                            </td>
+                            <td class="border border-black px-4 py-2">
+                                [variable-here]
+                            </td>
+                            <td class="border border-black px-4 py-2">
+                                [variable-here]
+                            </td>
+                            <td class="border border-black px-4 py-2">
+                                [variable-here]
+                            </td>
+                            <td class="border border-black px-4 py-2">
+                                [variable-here]
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="flex mt-10 justify-end items-end mr-10">
+                    <span class="font-bold text-2xl"
+                        >Total Geral: [variable-here]</span
+                    >
+                </div>
+                <div class="flex items-center justify-center mt-20">
+                    <span>Pedido de compras gerado automaticamente.</span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
